@@ -10,7 +10,7 @@ from dotenv import load_dotenv
 
 # LangChain imports
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-from langchain_huggingface import HuggingFaceEmbeddings
+from langchain_community.embeddings import HuggingFaceInferenceAPIEmbeddings
 from langchain_community.vectorstores import FAISS
 from langchain_core.messages import HumanMessage
 from langchain_huggingface import HuggingFaceEndpoint, ChatHuggingFace
@@ -23,7 +23,8 @@ app = FastAPI()
 # Enable CORS so the React frontend (running on port 3000) can talk to this backend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
+    allow_origins=["http://localhost:5173",
+                  "https://interview-iq-iota.vercel.app"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -39,11 +40,10 @@ TOTAL_QUESTIONS = 5  # Number of interview questions to ask per session
 # ---------- Shared Model Setup ----------
 # These are loaded ONCE at startup (heavy models — don't reload per request)
 
-print("Loading embedding model... (this may take a minute on first run)")
-embedding_model = HuggingFaceEmbeddings(
+embedding_model = HuggingFaceInferenceAPIEmbeddings(
+    api_key=os.getenv("HUGGINGFACEHUB_API_TOKEN"),
     model_name="sentence-transformers/all-MiniLM-L6-v2"
 )
-print("Embedding model loaded.")
 
 # HuggingFace Inference Endpoint LLM
 llm_endpoint = HuggingFaceEndpoint(
