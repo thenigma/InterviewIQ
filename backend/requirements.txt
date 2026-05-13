@@ -1,0 +1,45 @@
+fastapi
+uvicorn
+python-multipart
+pdfplumber
+python-dotenv
+
+# LangChain
+langchain
+langchain-core
+langchain-community
+langchain-huggingface
+langchain-text-splitters
+
+# HuggingFace
+sentence-transformers
+huggingface-hub
+
+# FAISS
+faiss-cpu
+
+# Required by HuggingFaceEmbeddings
+torch
+transformers
+
+# Key Responsibilities
+# Analyze structured and unstructured datasets to extract actionable insights
+# Build and optimize Machine Learning and Deep Learning models
+# Develop and deploy NLP and Generative AI applications using LLMs
+# Work on RAG-based systems using vector databases and embeddings
+# Perform data preprocessing, feature engineering, and exploratory data analysis
+# Create dashboards and visualizations for business stakeholders
+# Collaborate with cross-functional teams including product and engineering
+# Fine-tune and evaluate ML models for performance and scalability
+# Research and experiment with state-of-the-art AI techniques
+
+# Required Skills
+# Python, SQL, C/C++
+# Machine Learning & Data Analysis
+# Pandas, NumPy, Scikit-learn
+# Deep Learning & NLP basics
+# Generative AI, RAG, Prompt Engineering
+# LangChain, HuggingFace
+# Data Visualization (Matplotlib / Power BI)
+# Git, Jupyter, VS Code
+# Basic Cloud & API knowledge
