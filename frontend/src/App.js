@@ -3,7 +3,7 @@ import axios from "axios";
 import "./App.css";
 
 // The URL of our FastAPI backend
-const API_URL = "http://localhost:8000";
+const API_URL = "https://interviewiq-1-56k9.onrender.com";
 
 // Total number of interview questions
 const TOTAL_QUESTIONS = 5;
