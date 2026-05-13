@@ -5,7 +5,7 @@ import "./App.css";
 // The URL of our FastAPI backend
 const API_URL = "https://interviewiq-vq3n.onrender.com";
 
-// Total number of interview questions
+// Total number of interview questions 
 const TOTAL_QUESTIONS = 5;
 
 function App() {
